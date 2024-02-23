@@ -7,6 +7,12 @@
 
 body {
     color: #333;
+    user-select: none;
+}
+
+html {
+    scroll-padding: 80px;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -14,17 +20,23 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    outline: none;
 }
 
 .c {
     width: 85%;
     margin: 0 auto;
 }
+
 .home {
     height: 100vh;
 }
@@ -55,6 +67,7 @@ a {
     text-align: center;
     color: #333;
 }
+
 a.signup {
     background-color: var(--mc);
     color: white;
@@ -164,14 +177,21 @@ a.signup {
     background-color: white;
     border-radius: var(--r);
     border: 5px solid #333;
+    background-size: cover;
+}
+
+.wrapper .img.one {
+    background-image: url("three.jpg");
 }
 
 .wrapper .img.two {
     align-self: center;
+    background-image: url("two.jpg");
 }
 
 .wrapper .img.three {
     align-self: flex-end;
+    background-image: url("one.jpg");
 }
 
 .search {
@@ -208,96 +228,14 @@ a.signup {
     font-weight: bold;
 }
 
-.plan .c {
-    text-align: center;
-    padding: 50px 0 80px 0;
-}
-
-.plan h1 {
-    font-size: 45px;
-}
-
-.plan p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--lt);
-    padding: 30px 0 50px 0;
-}
-
-.cards {
-    height: 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.images {
-    height: 100%;
-    flex-basis: 85%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.images .img {
-    height: 100%;
-    flex: 1;
-    border-radius: var(--r);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-size: 14px;
-    padding-bottom: 20px;
-    transition: .2s linear;
-    color: white;
-    background-size: cover;
-    background-color: black;
-}
-
-.images .img:nth-child(odd) {
-    height: 85%;
-}
-
-.images .img.one {
-    background-image: linear-gradient(to top, rgba(10, 10, 10, 1), rgba(0, 0, 0, 0) 50%), url("img.jpg");
-}
-
-.cards button {
-    font-size: 25px;
-    font-weight: bold;
-    border-radius: var(--f);
-    background-color: var(--mc);
-    width: 70px;
-    height: 70px;
-    border: none;
-    color: white;
-}
-
-.images .img:hover {
-    padding-bottom: 25px;
-    transform: translateY(-15px);
-}
-
-.details {
-    margin-top: 70px;
-    background-color: var(--mc);
-    color: white;
-    border-radius: var(--r);
-    border: none;
-    font-size: 16px;
-    width: 200px;
-    padding: 15px 0;
-}
-
-
 .places {
-    padding-bottom: 80px;
+    padding: 50px 0 80px 0;
 }
 
 .places h1 {
     font-size: 45px;
     text-align: center;
-    padding-bottom: 120px;
+    padding-bottom: 100px;
 }
 
 .places .c {
@@ -317,7 +255,7 @@ a.signup {
 }
 
 .t p {
-    line-height: 1.5;
+    line-height: 1.7;
     font-size: 18px;
     text-align: justify;
 }
@@ -331,7 +269,6 @@ a.signup {
     width: 30%;
     align-self: flex-end;
     transition: .1s linear;
-    cursor: pointer;
 }
 
 .t button:hover {
@@ -352,6 +289,22 @@ a.signup {
     height: 100%;
     border-radius: 0 30px 0 0;
     transform: translateY(30px);
+}
+
+.i .img.one {
+    background-image: url("four.jpg");
+}
+
+.i .img.two {
+    background-image: url("five.jpg");
+}
+
+.i .img.three {
+    background-image: url("six.jpg");
+}
+
+.i .img.four {
+    background-image: url("one.jpg");
 }
 
 .i .bg {
@@ -416,7 +369,7 @@ a.signup {
     border-radius: var(--r);
     background-size: cover;
     background-color: white;
-    background-image: url("img.jpg");
+    background-image: url("five.jpg");
 }
 
 .choose p {
@@ -437,9 +390,11 @@ a.signup {
 .choose .box {
     border-radius: var(--r);
 }
-.choose .box.img{
+
+.choose .box.img {
     background-size: cover;
 }
+
 .choose .box.txt {
     display: flex;
     justify-content: center;
@@ -455,17 +410,21 @@ a.signup {
     line-height: 1.5;
 }
 
-.choose .one {
-    background-image: url("img.jpg");
+.choose .img {
+    background-size: cover;
 }
 
-.choose .two {
-    background-image: url("img.jpg");
+.choose .img.one {
+    background-image: url("six.jpg");
+}
+
+.choose .img.two {
+    background-image: url("three.jpg");
 }
 
 .off {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 40%, rgba(255, 255, 255)), url("img.jpg");
-    background-size:100% 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 40%, rgba(255, 255, 255)), url("seven.jpg");
+    background-size: 100% 100%;
     text-align: center;
     color: white;
     padding: 180px 0 60px 0;
@@ -498,32 +457,37 @@ a.signup {
     border-radius: var(--f);
     transition: .1s linear;
 }
-.off .arr:hover{
+
+.off .arr:hover {
     background-color: orange;
     color: white
 }
 
-footer{
+footer {
     background-color: #222;
     color: white;
     padding: 80px 0 100px 0;
 }
-footer p{
+
+footer p {
     color: #aaa;
     text-align: justify;
 }
-footer .c{
+
+footer .c {
     display: flex;
     gap: 50px;
     width: 65%;
 }
-footer .c div{
+
+footer .c div {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-footer .hr{
+
+footer .hr {
     height: 2px;
     width: 75%;
     margin-top: -5px;
@@ -531,19 +495,24 @@ footer .hr{
     border-radius: var(--f);
     display: block;
 }
-footer .c div:nth-child(1) p{
+
+footer .c div:nth-child(1) p {
     line-height: 1.7;
 }
-footer textarea{
+
+footer textarea {
     height: 150px;
     padding: 20px;
     border-radius: var(--r);
     border: none;
+    resize: none;
 }
-footer button{
+
+footer button {
     background-color: var(--mc);
     color: white;
     border-radius: var(--r);
     padding: 20px 0;
     border: none;
+    font-weight: bold;
 }
